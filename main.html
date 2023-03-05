@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mars Exploration</title>
+  <style>
+    .header {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+    }
+    .mars-image {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    Mars Exploration
+  </div>
+  <div class="image-container">
+    <img class="mars-image" id="mars-image">
+  </div>
+  <script>
+    const images = [
+    'https://mars.nasa.gov/files/mars2020/home/9337_PIA25681-FigureA-home.jpg',
+    'https://starwalk.space/gallery/images/mars-the-ultimate-guide/1920x1080.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/d/dc/PIA17944-MarsCuriosityRover-AfterCrossingDingoGapSanddune-20140209.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiOc86r75uQ04vegmeLVLHO0Tl_xevMJDEDA&usqp=CAU',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTPxGacHEZDNq9Z1_jKMOlR35T3Hx56i5TMQ&usqp=CAU'
+    ];
+
+    const marsImage = document.getElementById('mars-image');
+    marsImage.src = images[Math.floor(Math.random() * images.length)];
+  </script>
+
+</body>
+</html>
